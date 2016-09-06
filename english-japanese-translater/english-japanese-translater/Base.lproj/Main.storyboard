@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="english_japanese_translater" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rkY-iO-doN">
+                                <rect key="frame" x="35" y="270" width="530" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="on8-cH-KeD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yMP-8b-kq3">
+                                <rect key="frame" x="200" y="90" width="200" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="MRF-jl-277"/>
+                                    <constraint firstAttribute="width" constant="200" id="idW-U3-Jnx"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="English"/>
+                                    <segment title="Japanese"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bG-tm-jT7">
+                                <rect key="frame" x="200" y="180" width="200" height="60"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Dg9-F2-7eM"/>
+                                    <constraint firstAttribute="height" constant="60" id="cph-6n-yGD"/>
+                                </constraints>
+                                <state key="normal" title="Do!">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
+                                        <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnDoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fEU-cf-mAe"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="flh-wX-uPK">
+                                <rect key="frame" x="35" y="345" width="530" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rkY-iO-doN" firstAttribute="top" secondItem="9bG-tm-jT7" secondAttribute="bottom" constant="30" id="9Lh-sd-Kc4"/>
+                            <constraint firstItem="flh-wX-uPK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="9ST-mr-36E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rkY-iO-doN" secondAttribute="trailing" constant="15" id="A1W-iJ-phC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="flh-wX-uPK" secondAttribute="trailing" constant="15" id="H6w-A9-7jE"/>
+                            <constraint firstItem="rkY-iO-doN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="SxI-8O-CCh"/>
+                            <constraint firstItem="yMP-8b-kq3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TH8-TY-0OB"/>
+                            <constraint firstItem="flh-wX-uPK" firstAttribute="top" secondItem="rkY-iO-doN" secondAttribute="bottom" constant="15" id="Vwj-gP-vDt"/>
+                            <constraint firstItem="9bG-tm-jT7" firstAttribute="top" secondItem="yMP-8b-kq3" secondAttribute="bottom" constant="30" id="czN-SH-KsS"/>
+                            <constraint firstItem="9bG-tm-jT7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eAL-lJ-ULP"/>
+                            <constraint firstItem="rkY-iO-doN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jeC-PQ-1be"/>
+                            <constraint firstItem="rkY-iO-doN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oeV-gW-uRp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="flh-wX-uPK" secondAttribute="bottom" constant="15" id="rwa-OD-VRm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnDo" destination="9bG-tm-jT7" id="7Ix-1M-EXE"/>
+                        <outlet property="pastSearchWordsTableView" destination="flh-wX-uPK" id="thb-Az-y3m"/>
+                        <outlet property="switchEng_Jap" destination="yMP-8b-kq3" id="rrL-XH-Phk"/>
+                        <outlet property="textField" destination="rkY-iO-doN" id="lOf-Cf-267"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="380"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_english_japanese_translater {
+  umbrella header "Pods-english-japanese-translater-umbrella.h"
+
+  export *
+  module * { export * }
+}
